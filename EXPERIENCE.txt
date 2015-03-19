@@ -1,0 +1,43 @@
+
+===== Running =====
+
+To build this project, simply run the following command.
+
+  mvn package
+
+Once the package is built, you can view usage instructions with this
+command.
+
+  java -cp target/javulator-1.0-SNAPSHOT.jar calculator.Main -h 
+
+A simple example can be run as follows.
+
+  java -cp target/javulator-1.0-SNAPSHOT.jar calculator.Main "let(a, 2, mult(a, 7))"
+
+===== Discussion =====
+
+I decided early on in the development process to write all the code
+myself rather than using third-party modules. In light of the need to
+accommodate an quicker-than-expected schedule, I probably would have
+used Args4J and Log4J for option parsing and logging respectively, and
+perhaps ANTLR for generating a lexer and parser (though this would have
+reduced my task to simply writing a grammar and implementing the logic
+of the operators).
+
+In general, I think the program works mostly as expected, though I'm
+sure that bugs remain. The logging levels are implemented, but there
+are few places in the code where the logging functions are called. Given
+more time, I would implement more logging points, in addition to general
+code cleanup/refactoring, better error messages, and more testing. I
+would also add timestamps to the log entries.
+
+See the file ASSUMPTIONS.txt for a list of assumptions that I made about
+the assignment. I chose to allow decimal numbers as input and the output
+is printed in Java's representation of doubles (with at least 1
+significant digit after the decimal). I realized later that the input
+was intended to be restricted to integers, but hopefully this deviation
+is acceptable. (The requirements regarding non-integer output were
+unspecified.)
+
+The file TIME.txt includes a log of the time I spent working on various
+parts of the application. It was an enjoyable exercise.

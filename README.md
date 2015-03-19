@@ -1,2 +1,0 @@
-# javulator
-A simple calculator

@@ -1,0 +1,18 @@
+
+Assumptions:
+Multiple arguments can be provided on the command line, and each of
+  these should be evaluated as an independent expression.
+The scope of a reference defined by a let expression is limited to the
+  expression provided in the 3rd parameter of the let expression. (This
+  is implied by the structure of a let expression.)
+Variables defined in a parent let expression can be shadowed by those of
+  the same name defined in a child let expression.
+The use of unbound variables should result in an exception.
+Function names are case-insensitive.
+Number values must be in decimal notation (i.e. hex, octal, etc. are not
+  supported).
+Floating point values and integers should be supported.
+Whitespace should be ignored.
+Uses of function names as variable names rather than as the target of a
+  call will generate an exception.
+
